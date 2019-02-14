@@ -1,3 +1,33 @@
-<p>
-  bots works!
-</p>
+<ngxux-mat-header-nav title="Manage Bots"
+                      (buttonClick)="onHeaderNavButtonClick($event)"
+                      [buttons]="[
+
+                                        {
+
+                                            label: 'Deploy Bot..'
+
+                                        }
+
+                                    ]"
+
+                      [tabs]="[
+
+                                    {
+
+                                        label: 'Deploy Bots..',
+                                        path: '/bots/deploy'
+
+                                    }, {
+
+                                        label: 'Manage Bots',
+                                        path: '/bots/search'
+
+                                    }
+
+                                ]"></ngxux-mat-header-nav>
+
+<div>
+
+    <router-outlet></router-outlet>
+
+</div>

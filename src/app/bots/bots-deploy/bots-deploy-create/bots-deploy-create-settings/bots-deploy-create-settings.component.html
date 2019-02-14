@@ -1,0 +1,46 @@
+<div class="wrapper">
+
+    <form *ngFor="let formGroup of botsDeployCreateService.formGroup.get('environment')['controls']"
+          [formGroup]="formGroup">
+
+        <table style="width: 100%">
+
+            <tr>
+
+                <td style="width: 35%">
+
+                    <mat-form-field style="width: 99%" floatLabel="always">
+
+                        <input matInput
+                               maxlength="255"
+                               required
+                               appAutofocus
+                               formControlName="name"
+                               placeholder="Environment Variable Name">
+
+                    </mat-form-field>
+
+                </td>
+
+                <td>
+
+                    <mat-form-field style="width: 100%" floatLabel="always">
+
+                        <input matInput
+                               maxlength="1000"
+                               required
+                               appAutofocus
+                               formControlName="name"
+                               placeholder="Environment Variable Value">
+
+                    </mat-form-field>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </form>
+
+</div>

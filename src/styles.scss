@@ -1,4 +1,4 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/purple-green.css";
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 @import '~@swimlane/ngx-datatable/release/index.css';
 @import '~@swimlane/ngx-datatable/release/themes/material.css';
@@ -9,13 +9,14 @@ body {
     margin: 0;
     padding: 0;
     
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: "open sans", Roboto, "Helvetica Neue", sans-serif;
     
 }
 
 * {
     
     outline: none;
+    color: #d7d7d7;
     
 }
 
@@ -42,9 +43,15 @@ mat-drawer-content {
  * Vertical Toolbar (either on the left or right)
  *
  */
+.mat-drawer {
+    
+    background: #1D2125 !important;
+    
+}
+
 .ngxux-admin-vertical-toolbar {
     
-    background: #fff;
+    background: #1D2125;
     
     .item {
         
@@ -79,4 +86,37 @@ mat-drawer-content {
         
     }
     
+}
+
+.content {
+    
+    background: #22272A !important;
+    
+}
+
+ngxux-mat-header-nav .wrapper {
+    
+    background: #36393E !important;
+    
+}
+
+mat-expansion-panel {
+    
+    background: #2E3336 !important;
+    
+}
+
+.buttons {
+    
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top: 20px;
+    
+    
+}
+
+.buttons.right {
+    
+    justify-content: flex-end;
 }

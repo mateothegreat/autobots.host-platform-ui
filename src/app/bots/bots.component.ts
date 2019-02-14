@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component }               from '@angular/core';
+import { NgxuxMatHeaderNavButton } from '@ngxux/ngxux-mat-header-nav/lib/ngxux-mat-header-nav-button';
 
 @Component({
-  selector: 'app-bots',
-  templateUrl: './bots.component.html',
-  styleUrls: ['./bots.component.scss']
+    selector: 'app-bots',
+    templateUrl: './bots.component.html',
+    styleUrls: [ './bots.component.scss' ]
 })
-export class BotsComponent implements OnInit {
+export class BotsComponent {
 
-  constructor() { }
+    public onHeaderNavButtonClick(e: NgxuxMatHeaderNavButton): void {
 
-  ngOnInit() {
-  }
+        console.log(e.label);
+
+    }
 
 }

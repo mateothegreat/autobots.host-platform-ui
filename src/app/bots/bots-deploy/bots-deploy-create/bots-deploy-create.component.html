@@ -1,0 +1,109 @@
+<div class="wrapper">
+
+    <mat-accordion>
+
+        <mat-expansion-panel expanded="true">
+
+            <mat-expansion-panel-header>
+
+                <mat-panel-title>
+
+                    New Bot Details
+
+                </mat-panel-title>
+
+                <mat-panel-description>
+
+
+                </mat-panel-description>
+
+            </mat-expansion-panel-header>
+
+            <app-bots-deploy-create-info></app-bots-deploy-create-info>
+
+            <div class="down-arrow">
+
+                <mat-icon>arrow_downward</mat-icon>
+
+            </div>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel expanded="true">
+
+            <mat-expansion-panel-header>
+
+                <mat-panel-title>
+
+                    Repository Information
+
+                </mat-panel-title>
+
+                <mat-panel-description>
+
+
+                </mat-panel-description>
+
+            </mat-expansion-panel-header>
+
+            <app-bots-deploy-create-repository></app-bots-deploy-create-repository>
+
+            <div class="down-arrow">
+
+                <mat-icon>arrow_downward</mat-icon>
+
+            </div>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel expanded="true">
+
+            <mat-expansion-panel-header>
+
+                <mat-panel-title>
+
+                    Settings
+
+                </mat-panel-title>
+
+                <mat-panel-description>
+
+
+                </mat-panel-description>
+
+            </mat-expansion-panel-header>
+
+            <app-bots-deploy-create-settings></app-bots-deploy-create-settings>
+
+            <div class="down-arrow">
+
+                <mat-icon>arrow_downward</mat-icon>
+
+            </div>
+
+        </mat-expansion-panel>
+
+    </mat-accordion>
+
+    <div class="buttons"
+         [class.right]="!botsDeployCreateService.bot">
+
+        <button *ngIf="botsDeployCreateService.bot"
+                (click)="onDeleteClick()"
+                mat-raised-button color="warn">
+
+            Delete
+
+        </button>
+
+        <button (click)="botsDeployCreateService.create()"
+                [disabled]="!botsDeployCreateService.formGroup.valid"
+                mat-raised-button color="accent">
+
+            Save
+
+        </button>
+
+    </div>
+
+</div>

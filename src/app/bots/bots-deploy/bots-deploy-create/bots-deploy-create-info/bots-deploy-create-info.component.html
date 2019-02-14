@@ -1,0 +1,79 @@
+<div class="wrapper">
+
+    <form [formGroup]="botsDeployCreateService.formGroup">
+
+        <table style="width: 100%">
+
+            <tr>
+
+                <td style="width: 100%">
+
+
+                </td>
+
+                <td style="display: flex; justify-content: flex-end">
+
+                    <mat-button-toggle-group [formControl]="botsDeployCreateService.formGroup.get('status')">
+
+                        <mat-button-toggle value="ACTIVE">
+
+                            ACTIVE
+
+                        </mat-button-toggle>
+
+                        <mat-button-toggle value="DISABLED">
+
+                            DISABLED
+
+                        </mat-button-toggle>
+
+                    </mat-button-toggle-group>
+
+                </td>
+
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2">
+
+                    <mat-form-field style="width: 100%" floatLabel="always">
+
+                        <input matInput
+                               maxlength="255"
+                               required
+                               appAutofocus
+                               formControlName="name"
+                               placeholder="Name">
+
+                    </mat-form-field>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2">
+
+                    <mat-form-field style="width: 100%"
+                                    floatLabel="always"
+                                    class="description">
+
+                        <textarea matInput
+                                  maxlength="255"
+                                  formControlName="description"
+                                  placeholder="Description"></textarea>
+
+                    </mat-form-field>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </form>
+
+</div>

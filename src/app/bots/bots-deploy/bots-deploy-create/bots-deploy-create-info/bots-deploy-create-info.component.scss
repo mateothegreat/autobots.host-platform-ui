@@ -1,0 +1,28 @@
+:host {
+    
+    .wrapper {
+        
+        form {
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            mat-form-field {
+                
+                margin: 10px;
+                
+            }
+            
+            .description {
+                
+                flex: 1;
+                margin-right: 25px;
+                
+            }
+            
+        }
+        
+    }
+    
+}
