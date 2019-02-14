@@ -2,6 +2,6 @@ export const environment = {
 
     production: true,
 
-    API_BASE: 'http://localhost:8080'
+    API_BASE: 'https://api.autobots.host'
 
 };
