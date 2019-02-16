@@ -1,3 +1,20 @@
-<p>
-  bots-search works!
-</p>
+<ngxux-datatable [columns]="[{
+
+        name: 'Name'
+
+    }, {
+
+        name: 'Git URI',
+        cellTemplate: uri
+
+    }, {
+
+        name: 'Status'
+
+    }]"></ngxux-datatable>
+
+<ng-template #uri let-column="column" let-row="row" let-value="value">
+
+    {{ row.gitUrl }}
+
+</ng-template>
