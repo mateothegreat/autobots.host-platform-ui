@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "ngxux-starter": {
+        "autobots-platform-ui": {
             "root": "",
             "sourceRoot": "src",
             "projectType": "application",
@@ -36,7 +36,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/ngxux-starter",
+                        "outputPath": "dist/autobots-platform-ui",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -85,18 +85,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "ngxux-starter:build"
+                        "browserTarget": "autobots-platform-ui:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "ngxux-starter:build:production"
+                            "browserTarget": "autobots-platform-ui:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "ngxux-starter:build"
+                        "browserTarget": "autobots-platform-ui:build"
                     }
                 },
                 "test": {
@@ -130,7 +130,7 @@
                 }
             }
         },
-        "ngxux-starter-e2e": {
+        "autobots-platform-ui-e2e": {
             "root": "e2e/",
             "projectType": "application",
             "prefix": "",
@@ -139,11 +139,11 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "ngxux-starter:serve"
+                        "devServerTarget": "autobots-platform-ui:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "ngxux-starter:serve:production"
+                            "devServerTarget": "autobots-platform-ui:serve:production"
                         }
                     }
                 },
@@ -159,5 +159,5 @@
             }
         }
     },
-    "defaultProject": "ngxux-starter"
+    "defaultProject": "autobots-platform-ui"
 }
