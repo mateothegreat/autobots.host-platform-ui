@@ -24,7 +24,7 @@ push:		; docker push $(IMAGE)
 
 kubeme:
 
-	kubectl config use-context <replace with a kubernetes context>
+	kubectl config use-context gke_matthewdavis-devops_us-east1-b_cluster-1
 
 changelog:
 
