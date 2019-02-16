@@ -1,9 +1,42 @@
 <div class="wrapper">
 
+    <form [formGroup]="botsDeployCreateService.formGroup">
+
+        <table>
+
+            <tr>
+
+                <td>
+
+                    <mat-form-field floatLabel="always">
+
+                        <mat-select formControlName="image"
+                                    placeholder="Runtime"
+                                    required>
+
+                            <mat-option *ngFor="let image of botsDeployCreateService.botImages"
+                                        [value]="image">
+
+                                {{ image.name }}
+
+                            </mat-option>
+
+                        </mat-select>
+
+                    </mat-form-field>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </form>
+
     <form *ngFor="let formGroup of botsDeployCreateService.formGroup.get('environments')['controls']"
           [formGroup]="formGroup">
 
-        <table style="width: 100%">
+        <table>
 
             <tr>
 

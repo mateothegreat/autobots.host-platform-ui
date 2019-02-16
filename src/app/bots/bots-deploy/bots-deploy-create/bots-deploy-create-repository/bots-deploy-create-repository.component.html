@@ -6,7 +6,31 @@
 
             <tr>
 
-                <td>
+                <td style="display: flex; justify-content: flex-end">
+
+                    <mat-button-toggle-group [formControl]="botsDeployCreateService.formGroup.get('repoVisibility')">
+
+                        <mat-button-toggle value="Public">
+
+                            Public
+
+                        </mat-button-toggle>
+
+                        <mat-button-toggle value="Private">
+
+                            Private
+
+                        </mat-button-toggle>
+
+                    </mat-button-toggle-group>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td style="width: 100%">
 
                     <mat-form-field style="width: 100%" floatLabel="always">
 

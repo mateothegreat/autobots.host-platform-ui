@@ -4,6 +4,7 @@ import { Router }                                                     from '@ang
 import { ToastrService }                                              from 'ngx-toastr';
 import { Bot }                                                        from '../../bot';
 import { BotEnvironment }                                             from '../../bot-environment';
+import { BotImage }                                                   from '../../bot-image';
 import { BotsService }                                                from '../../bots.service';
 
 @Injectable({
@@ -13,12 +14,35 @@ export class BotsDeployCreateService {
 
     public bot: any;
 
+    public botImages: Array<BotImage> = [ {
+
+        image: 'node:11.9.0-alpine',
+        name: 'Node.js 11.9.0 Alpine',
+        description: 'Node.js version 11.9.0 running on Alpine Linux'
+
+    }, {
+        image: 'node:8.15.0-alpine',
+        name: 'Node.js 8.15.0 Alpine',
+        description: 'Node.js version 8.15.0 running on Alpine Linux'
+
+    }, {
+
+        image: 'python:3.7.2-alpine',
+        name: 'Python 3.7.2 Alpine',
+        description: 'Python version 3.7.2 running on Alpine Linux'
+
+    }, {
+
+        image: 'python:2.7.15-alpine',
+        name: 'Python 2.7.15 Alpine',
+        description: 'Python version 2.7.15 running on Alpine Linux'
+
+    } ];
+
     public formGroup: FormGroup = new FormGroup({
 
         status: new FormControl('ACTIVE', Validators.required),
-
-        gitUrl: new FormControl('', Validators.required),
-
+        image: new FormControl('ACTIVE', Validators.required),
         name: new FormControl('', [
 
             Validators.required,
@@ -26,14 +50,14 @@ export class BotsDeployCreateService {
             Validators.maxLength(255)
 
         ]),
-
+        repoVisibility: new FormControl('Public', Validators.required),
+        gitUrl: new FormControl('', Validators.required),
         description: new FormControl('', [
 
             Validators.minLength(4),
             Validators.maxLength(255)
 
         ]),
-
         environments: new FormArray([])
 
     });
@@ -60,6 +84,14 @@ export class BotsDeployCreateService {
                 (this.formGroup.get('environments') as FormArray).push(this.getEnvironmentControl(env));
 
             });
+
+        } else {
+
+            (this.formGroup.get('environments') as FormArray).push(this.getEnvironmentControl());
+            (this.formGroup.get('environments') as FormArray).push(this.getEnvironmentControl());
+            (this.formGroup.get('environments') as FormArray).push(this.getEnvironmentControl());
+            (this.formGroup.get('environments') as FormArray).push(this.getEnvironmentControl());
+            (this.formGroup.get('environments') as FormArray).push(this.getEnvironmentControl());
 
         }
 
