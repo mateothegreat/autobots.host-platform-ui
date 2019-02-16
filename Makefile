@@ -9,8 +9,8 @@ include .make/Makefile.inc
 
 NS		?= default
 VERSION ?= $(shell git rev-parse HEAD)
-APP     ?= <replace with an application name>
-IMAGE   ?= gcr.io/<replace with a GCP project name>/$(APP):$(VERSION)
+APP     ?= autobots-platform-ui
+IMAGE   ?= gcr.io/matthewdavis-devops/$(APP):$(VERSION)
 PORT    ?= 80
 
 .PHONY: build
