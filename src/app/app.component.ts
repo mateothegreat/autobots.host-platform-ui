@@ -1,4 +1,5 @@
 import { Component }                                                   from '@angular/core';
+import { Router }                                                      from '@angular/router';
 import { NgxuxMatDialogService }                                       from '@ngxux/ngxux-mat-dialog';
 import { NgxuxMatToolbarItem, NgxuxMatToolbarService }                 from '@ngxux/ngxux-mat-toolbar';
 import { NgxuxMatVerticalToolbarItem, NgxuxMatVerticalToolbarService } from '@ngxux/ngxux-mat-vertical-toolbar';
@@ -14,7 +15,8 @@ export class AppComponent {
     public constructor(public authenticationService: AuthenticationService,
                        private ngxuxMatVerticalToolbarService: NgxuxMatVerticalToolbarService,
                        private ngxuxMatDialogService: NgxuxMatDialogService,
-                       private ngxuxMatToolbarService: NgxuxMatToolbarService) {
+                       private ngxuxMatToolbarService: NgxuxMatToolbarService,
+                       private router: Router) {
 
         ngxuxMatToolbarService.menuItems = [
 
@@ -33,23 +35,9 @@ export class AppComponent {
 
         ngxuxMatVerticalToolbarService.click$.subscribe((item: NgxuxMatVerticalToolbarItem) => {
 
-            console.log(item);
+            this.router.navigate([ item.path ]);
 
         });
-
-        // ngxuxMatDialogService.open(TestDialogComponent, new NgxuxMatDialogSettings({
-        //
-        //     id: 'test',
-        //     title: 'Testing Dialog',
-        //
-        //     width: '200px',
-        //     height: '200px',
-        //
-        //     backShow: true,
-        //     nextShow: true,
-        //     nextLabel: 'Save!'
-        //
-        // }));
 
     }
 

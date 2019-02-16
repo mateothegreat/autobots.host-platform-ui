@@ -139,3 +139,26 @@ table {
     width: 100%;
     
 }
+
+
+ngxux-mat-login {
+    
+    .wrapper {
+        
+        background: url('/assets/bg.jpg') no-repeat !important;
+        background-size: cover !important;
+        
+        .container {
+            
+            background: #333 !important;
+            
+            .title, .buttons {
+                
+                background: #222 !important;
+                
+            }
+            
+        }
+    }
+    
+}
