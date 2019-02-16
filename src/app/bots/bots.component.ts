@@ -1,4 +1,5 @@
 import { Component }               from '@angular/core';
+import { Router }                  from '@angular/router';
 import { NgxuxMatHeaderNavButton } from '@ngxux/ngxux-mat-header-nav/lib/ngxux-mat-header-nav-button';
 
 @Component({
@@ -8,9 +9,17 @@ import { NgxuxMatHeaderNavButton } from '@ngxux/ngxux-mat-header-nav/lib/ngxux-m
 })
 export class BotsComponent {
 
+    public constructor(private router: Router) {
+
+    }
+
     public onHeaderNavButtonClick(e: NgxuxMatHeaderNavButton): void {
 
-        console.log(e.label);
+        if (e.label === 'Add Bot..') {
+
+            this.router.navigate([ '/bots/deploy/git' ]);
+
+        }
 
     }
 

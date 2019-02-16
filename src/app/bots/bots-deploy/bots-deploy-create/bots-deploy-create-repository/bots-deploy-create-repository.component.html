@@ -1,3 +1,30 @@
-<p>
-  bots-deploy-create-repository works!
-</p>
+<div class="wrapper">
+
+    <form [formGroup]="botsDeployCreateService.formGroup">
+
+        <table style="width: 100%">
+
+            <tr>
+
+                <td>
+
+                    <mat-form-field style="width: 100%" floatLabel="always">
+
+                        <input matInput
+                               maxlength="255"
+                               required
+                               appAutofocus
+                               formControlName="gitUrl"
+                               placeholder="Git Repository URL">
+
+                    </mat-form-field>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </form>
+
+</div>

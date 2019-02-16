@@ -14,11 +14,29 @@ export class BotsService extends APIClient<Bot> {
         return this._getPageable('bots');
 
     }
-    
+
+    public getByUUID(uuid: string): Observable<Bot> {
+
+        return this.get(`bots/${ uuid }`);
+
+    }
+
     public create(bot: Bot): Observable<Bot> {
 
         return this.post('bots', bot);
 
     }
 
+    public update(uuid: string, bot: Bot): Observable<Bot> {
+
+        return this.post(`bots/${ uuid }`, bot);
+
+    }
+
+    public deleteByUUID(uuid: string): Observable<boolean> {
+
+        return this.delete(`bots/${ uuid }`);
+
+    }
+    
 }

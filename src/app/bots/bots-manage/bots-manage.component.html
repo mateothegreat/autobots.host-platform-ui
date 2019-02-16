@@ -1,0 +1,27 @@
+<div class="wrapper">
+
+    <div class="top">
+
+        <div class="left">
+
+            {{ bot?.name }}
+
+        </div>
+
+        <div class="right">
+
+            <button mat-raised-button
+                    (click)="onRedeployClick()"
+                    color="primary">
+
+                Re-Deploy
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <app-bots-deploy-create></app-bots-deploy-create>
+
+</div>

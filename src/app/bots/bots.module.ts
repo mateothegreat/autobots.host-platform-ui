@@ -8,6 +8,7 @@ import { BotsDeployCreateSettingsComponent }   from './bots-deploy/bots-deploy-c
 import { BotsDeployCreateComponent }           from './bots-deploy/bots-deploy-create/bots-deploy-create.component';
 import { BotsDeployWidgetComponent }           from './bots-deploy/bots-deploy-widget/bots-deploy-widget.component';
 import { BotsDeployComponent }                 from './bots-deploy/bots-deploy.component';
+import { BotsManageComponent }                 from './bots-manage/bots-manage.component';
 import { BotsSearchComponent }                 from './bots-search/bots-search.component';
 import { BotsComponent }                       from './bots.component';
 
@@ -16,20 +17,14 @@ import { BotsComponent }                       from './bots.component';
     declarations: [
 
         BotsComponent,
-
         BotsDeployComponent,
-
         BotsSearchComponent,
-
         BotsDeployWidgetComponent,
-
         BotsDeployCreateComponent,
-
         BotsDeployCreateInfoComponent,
-
         BotsDeployCreateRepositoryComponent,
-
-        BotsDeployCreateSettingsComponent
+        BotsDeployCreateSettingsComponent,
+        BotsManageComponent
 
     ],
 
@@ -59,15 +54,21 @@ import { BotsComponent }                       from './bots.component';
                     }, {
 
                         path: 'manage/:uuid',
-                        component: BotsDeployCreateComponent
+                        component: BotsManageComponent
 
                     }, {
 
                         path: 'search',
                         component: BotsSearchComponent
 
+                    }, {
+
+                        path: '',
+                        pathMatch: 'full',
+                        redirectTo: 'deploy'
 
                     }
+                    
                 ]
 
             }

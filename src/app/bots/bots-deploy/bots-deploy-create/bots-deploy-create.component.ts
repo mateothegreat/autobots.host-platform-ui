@@ -14,7 +14,11 @@ export class BotsDeployCreateComponent {
 
         route.params.subscribe((params: any) => {
 
-            console.log(params);
+            if (!params.uuid) {
+
+                botsDeployCreateService.reset();
+
+            }
 
         });
 

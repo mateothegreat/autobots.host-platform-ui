@@ -1,6 +1,6 @@
 <div class="wrapper">
 
-    <form *ngFor="let formGroup of botsDeployCreateService.formGroup.get('environment')['controls']"
+    <form *ngFor="let formGroup of botsDeployCreateService.formGroup.get('environments')['controls']"
           [formGroup]="formGroup">
 
         <table style="width: 100%">
@@ -13,7 +13,6 @@
 
                         <input matInput
                                maxlength="255"
-                               required
                                appAutofocus
                                formControlName="name"
                                placeholder="Environment Variable Name">
@@ -28,9 +27,8 @@
 
                         <input matInput
                                maxlength="1000"
-                               required
                                appAutofocus
-                               formControlName="name"
+                               formControlName="value"
                                placeholder="Environment Variable Value">
 
                     </mat-form-field>
