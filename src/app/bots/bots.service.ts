@@ -38,5 +38,11 @@ export class BotsService extends APIClient<Bot> {
         return this.delete(`bots/${ uuid }`);
 
     }
-    
+
+    public deployByUUID(uuid: string): Observable<boolean> {
+
+        return this.post(`bots/${ uuid }/deploy`);
+
+    }
+
 }

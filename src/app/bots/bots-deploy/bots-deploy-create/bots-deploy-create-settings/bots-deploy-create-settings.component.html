@@ -15,7 +15,7 @@
                                     required>
 
                             <mat-option *ngFor="let image of botsDeployCreateService.botImages"
-                                        [value]="image">
+                                        [value]="image.id">
 
                                 {{ image.name }}
 
@@ -33,7 +33,7 @@
 
     </form>
 
-    <form *ngFor="let formGroup of botsDeployCreateService.formGroup.get('environments')['controls']"
+    <form *ngFor="let formGroup of botsDeployCreateService.formGroup.get('environments')['controls']; let i = index"
           [formGroup]="formGroup">
 
         <table>
@@ -65,6 +65,12 @@
                                placeholder="Environment Variable Value">
 
                     </mat-form-field>
+
+                </td>
+
+                <td>
+
+                    <mat-icon (click)="botsDeployCreateService.removeEnv(i)">close</mat-icon>
 
                 </td>
 
