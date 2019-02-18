@@ -4,6 +4,7 @@ import { NgxuxMatDialogService }                                       from '@ng
 import { NgxuxMatToolbarItem, NgxuxMatToolbarService }                 from '@ngxux/ngxux-mat-toolbar';
 import { NgxuxMatVerticalToolbarItem, NgxuxMatVerticalToolbarService } from '@ngxux/ngxux-mat-vertical-toolbar';
 import { AuthenticationService }                                       from './_lib/AuthenticationService';
+import { MessagingService }                                            from './_lib/MessagingService';
 
 @Component({
     selector: 'app-root',
@@ -16,7 +17,8 @@ export class AppComponent {
                        private ngxuxMatVerticalToolbarService: NgxuxMatVerticalToolbarService,
                        private ngxuxMatDialogService: NgxuxMatDialogService,
                        private ngxuxMatToolbarService: NgxuxMatToolbarService,
-                       private router: Router) {
+                       private router: Router,
+                       private messagingService: MessagingService) {
 
         ngxuxMatToolbarService.menuItems = [
 
