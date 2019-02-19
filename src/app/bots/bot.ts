@@ -13,4 +13,3 @@ export class Bot {
     public environments: Array<BotEnvironment>;
 
 }
-
