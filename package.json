@@ -35,7 +35,7 @@
         "@ngxux/ngxux-mat-vertical-toolbar": "0.0.8",
         "@swimlane/ngx-datatable": "^14.0.0",
         "core-js": "^2.5.4",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "net": "^1.0.2",
         "ngx-toastr": "^9.1.1",
         "rxjs": "~6.3.3",
